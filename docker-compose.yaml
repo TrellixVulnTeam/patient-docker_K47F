@@ -28,6 +28,10 @@ services:
     container_name: service-patient
     image: service-patient
     build: service-patient
+    ports:
+      - 8081:8081
+    links:
+      - sqldb
 
   #adminer:
     #image: adminer:4.7.7-standalone
