@@ -1,0 +1,39 @@
+version: '3.6'
+services:
+  sqldb:
+    image: mariadb:10.4.10
+    container_name: patient-database
+    volumes:
+      - ./mariadb/patient.sql:/docker-entrypoint-initdb/patient.sql
+    environment:
+      - MYSQL_ROOT_PASSWORD=admin
+      - MYSQL_USER=admin
+      - MYSQL_PASSWORD=admin
+      - MYSQL_DATABASE=mediscreen
+    ports:
+      - 3306:3306
+    restart: always
+    
+  mongodb:
+    image: mongo:5.0.2
+    container_name: note-database
+    volumes:
+      - ./mongodb/data/db/:/data/db/
+    ports:
+      - 27017:27017
+    restart: always
+
+
+  service-patient:
+    container_name: service-patient
+    image: service-patient
+    build: service-patient
+
+  #adminer:
+    #image: adminer:4.7.7-standalone
+    #container_name: adminer
+    #links:
+    #  - db
+    #ports:
+     # - 8082:3306
+    #restart: always
