@@ -1,5 +1,11 @@
 version: '3.9'
 services:
+  mediscreen:
+    container_name: mediscreen
+    build: mediscreen
+    ports: 
+      - 8080:8080
+    
   patientdb:
     container_name: patientdb
     image: mariadb
@@ -13,11 +19,6 @@ services:
       - MYSQL_DATABASE=mediscreen
     ports:
       - 3306:3306
-    healthcheck:
-      #test: ["CMD", "mysqlcheck", "-c", "-h", "localhost", "-P", "3306", "-B", "mediscreen", "-u", "admin", "-p", "admin"]
-      test: ["CMD", "mysqladmin" ,"ping", "-h", "localhost"]
-      interval: 20s
-      retries: 20
     
   mongodb:
     image: mongo:5.0.2 
@@ -57,3 +58,9 @@ services:
       - 8082:8082
     links:
       - mongodb
+  
+  service-rapport:
+    container_name: service-rapport
+    build: service-rapport
+    ports:
+      - 8083:8083
