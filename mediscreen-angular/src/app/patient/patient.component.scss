@@ -1,0 +1,77 @@
+a {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.add-patient{
+  cursor: pointer;
+  background-color: #4c7faf;
+  border: none;
+  color: white;
+  padding: 10px 22px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  margin-bottom: 20px;
+}
+
+.delete-patient{
+  cursor: pointer;
+  background-color: #db242d;
+  border: none;
+  color: white;
+  margin-right: 20px;
+  padding: 10px 22px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  margin-bottom: 20px;
+}
+
+.edit-patient{
+  cursor: pointer;
+  background-color: #28bd15;
+  border: none;
+  color: white;
+  margin-right: 20px;
+  padding: 10px 22px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  margin-bottom: 20px;
+}
+
+.note-patient{
+  cursor: pointer;
+  background-color: #bd8215;
+  border: none;
+  color: white;
+  padding: 10px 22px;
+  margin-right: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  margin-bottom: 20px;
+}
+
+.report-patient{
+  cursor: pointer;
+  background-color: #0c5c8a;
+  border: none;
+  color: white;
+  padding: 10px 22px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  margin-bottom: 20px;
+}
+
+.space-between {
+  margin-right: 40px;
+  margin-top: 20px;
+}

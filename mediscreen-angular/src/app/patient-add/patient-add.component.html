@@ -1,0 +1,36 @@
+<h1>Ajouter un patient</h1>
+<div>
+  <form [formGroup]="patientAddForm" (ngSubmit)="onSubmitForm()">
+    <div class="form-group">
+      <label for="prenom">Prénom </label>
+    <input type="text" id="prenom" formControlName="firstName">
+    </div>
+    <div class="form-group">
+      <label for="prenom">Nom </label>
+      <input type="text" id="prenom" formControlName="lastName">
+    </div>
+    <div class="form-group">
+      <label for="prenom">Date de naissance </label>
+      <input type="text" id="prenom" formControlName="dateOfBirth">
+    </div>
+    <div class="form-group">
+      <label for="prenom">Genre </label>
+      <input type="text" id="prenom" formControlName="gender">
+    </div>
+    <div class="form-group">
+      <label for="prenom">Adresse </label>
+      <input type="text" id="prenom" formControlName="address">
+    </div>
+    <div class="form-group">
+      <label for="prenom">Téléphone </label>
+      <input type="text" id="prenom" formControlName="phone">
+    </div>
+    <div>
+      <button class="add-patient" type="submit">Ajouter</button>
+    </div>
+  </form>
+  <div>
+    <button class="btn-back" (click)="goBack()">Cancel</button>
+  </div>
+</div>
+

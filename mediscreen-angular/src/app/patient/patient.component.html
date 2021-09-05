@@ -1,0 +1,13 @@
+<h1>Liste des patients</h1>
+<div >
+  <button [routerLink]="['/patient-add']" class="add-patient">Ajouter</button>
+</div>
+<div *ngFor="let patient of patients" >
+  <div>
+    <a class="space-between" [routerLink]="['/patient-info', patient.id]">{{ patient.firstName }} {{ patient.lastName }}</a>
+    <button class="delete-patient" (click)="deletePatient(patient.id)">Supprimer</button>
+    <button class="edit-patient" [routerLink]="['/patient-edit', patient.id]">Editer</button>
+    <button class="note-patient" [routerLink]="['/patient-note', patient.id]">Note</button>
+    <button class="report-patient" [routerLink]="['/patient-report', patient.id]">Rapport</button>
+  </div>
+</div>

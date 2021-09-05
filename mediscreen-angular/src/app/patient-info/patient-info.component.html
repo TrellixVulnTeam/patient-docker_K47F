@@ -1,0 +1,12 @@
+<ng-container *ngIf="patient">
+  <h1>Informations du patient</h1>
+    <p>Prénom: {{ patient.firstName }}</p>
+    <p>Nom: {{ patient.lastName }}</p>
+    <p>Date de naissance: {{ patient.dateOfBirth }}</p>
+    <p>Genre: {{ patient.gender }}</p>
+    <p>Adresse: {{ patient.address }}</p>
+    <p>Téléphone: {{ patient.phone }}</p>
+    <div>
+      <button class="btn-back" (click)="goBack()">Cancel</button>
+    </div>
+</ng-container>
