@@ -4,7 +4,7 @@ services:
     container_name: mediscreen
     build: mediscreen
     ports: 
-      - 8080:8080
+      - 8084:8084
     
   patientdb:
     container_name: patientdb
@@ -64,3 +64,9 @@ services:
     build: service-rapport
     ports:
       - 8083:8083
+      
+  mediscreen-angular:
+    container_name: mediscreen-front
+    build: mediscreen-angular
+    ports: 
+      - 8080:80
